@@ -7,13 +7,13 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "../updateVersion.sh '${nextRelease.version}' 'LiftButton/LiftButton.csproj'"
+        "prepareCmd": "./updateVersion.sh '${nextRelease.version}' 'LiftButton/LiftButton.csproj'"
       }
     ],
     [
       "@semantic-release/git",
       {
-        "assets": ["csharp/LiftButton/LiftButton.csproj"],
+        "assets": ["LiftButton/LiftButton.csproj", "CHANGELOG.md"],
         "message": "build(release): release version ${nextRelease.version}"
       }
     ],

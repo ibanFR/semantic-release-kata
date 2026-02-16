@@ -6,14 +6,14 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "mvn versions:set -DnewVersion=${nextRelease.version} && mvn versions:commit"
+        "prepareCmd": "sed -i 's/^version = \".*\"/version = \"${nextRelease.version}\"/' pyproject.toml"
       }
     ],
     "@semantic-release/changelog",
     [
       "@semantic-release/git",
       {
-        "assets": ["pom.xml", "CHANGELOG.md"],
+        "assets": ["pyproject.toml", "CHANGELOG.md"],
         "message": "build(release): release version ${nextRelease.version}"
       }
     ],

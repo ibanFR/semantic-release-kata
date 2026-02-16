@@ -8,7 +8,7 @@ nav_order: 1
 {: .no_toc }
 
 Learn how to apply Semantic Versioning to automate software releases by working through the [Lift Button](
-{% link _explanation/lift-button.md %}) Kata.
+{% link _reference/lift-button.md %}) Kata.
 {: .fs-6 .fw-300 }
 
 
@@ -21,16 +21,24 @@ workflow.
 1. TOC
 {:toc}
 
+## Learning Goals 🎯
 
+1. Understand the principles of Semantic Versioning (SemVer).
+2. Write semantic commit messages to document the nature of the changes made to the codebase.
+3. Explore how semantic commit messages are used to automate software releases.
 
 ## Connect: How are version numbers assigned for your software? (⏱️ 5 min)
 
-Discuss with the group how version numbers are currently assigned in your projects. Are they done manually or
-automatically? What challenges have you faced with versioning?
+Discuss with the group how version numbers are currently assigned in their current projects (you may use 
+[Describe your experience] or [Three Facts] depending on the team size).
+
+Write notes of what they say on a whiteboard or shared document where everyone can see them.
+
+Review the notes and highlight those that relate to the concepts covered in the upcoming sections.
 
 ## Concept: Semantic Versioning Specification (⏱️ 5 min)
 
-[Semantic Versioning] (SemVer) is a versioning scheme that consist in Simple set of rules and requirements that
+[Semantic Versioning] (SemVer) is a versioning scheme that consist in a simple set of rules and requirements that
 dictate how version numbers are assigned and incremented for software releases.
 
 SemVer uses a three-part version number - `MAJOR.MINOR.PATCH` - to communicate changes to the software with specific
@@ -49,7 +57,7 @@ Contributors follow a specific [Commit Message Convention]({% link _reference/co
 the nature of their changes:
 
 ```
-<type>: <description>
+<type>: <summary>
 <BLANK LINE>
 <optional body>
 <BLANK LINE>
@@ -67,7 +75,7 @@ release process.
 
 ## Concrete: Release initial features for Lift Button (⏱️ 20 min)
 
-After reviewing the [Lift Button Requirements]({% link _explanation/lift-button.md %}), the team has come up 
+After reviewing the [Lift Button Requirements]({% link _reference/lift-button.md %}), the team has come up 
 with an initial Test list to implement the first features of the Lift Button:
 
 ```java
@@ -123,7 +131,7 @@ the team will release this feature as a breaking change:
 2. Use the footer in your commit message to indicate that this change is not backwards compatible.
 
     ```
-    <type>: <description>
+    <type>: <summary>
 
     BREAKING CHANGE: <breaking change summary>
     <breaking change description + migration instructions>
@@ -131,11 +139,23 @@ the team will release this feature as a breaking change:
 3. After pushing your commit to the main branch, check your [repository's releases and tags] to see the new major 
    version created for the breaking change.
 
-## Conclusions: What are the benefits of releasing on every commit? (⏱️ 5 min)
+## Conclusions: When should you use semantic commit messages? (⏱️ 5 min)
 
-Discuss the advantages of automating releases with Semantic Release. Is it really a good idea to release on every
-commit? What benefits does it bring to your development workflow and team collaboration?
+Now that you have experienced how semantic commit messages are used to release new features of the Lift Button, ask the
+group to think about:
 
+> _[When should you use] semantic commit messages?_
+
+Collect and summarize the ideas for everyone. Highlight the ones that better align with the learning goals:
+
+> _"Use semantic commit messages to automate software releases in a continuous delivery pipeline"_
+>
+> _"Semantic commit messages help communicate the nature of changes to the codebase"_
+
+
+[Describe your experience]: https://sammancoaching.org/activities/connect/your_experience.html
+[Three Facts]: https://sammancoaching.org/activities/connect/three_facts.html
+[When should you use]: https://sammancoaching.org/activities/conclusions/when_to_use_this.html
 
 [Semantic Versioning]: https://semver.org/
 
